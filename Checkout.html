@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>إتمام الطلب | Sottile Store</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700&family=Great+Vibes&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<header>
+
+    <div class="logo">
+
+        <h2>Sottile</h2>
+
+        <span>STORE</span>
+
+    </div>
+
+    <nav>
+
+        <a href="index.html">الرئيسية</a>
+
+        <a href="cart.html">السلة</a>
+
+    </nav>
+
+    <div class="header-right">
+
+        <button class="lang-btn">
+
+            AR | EN
+
+        </button>
+
+        <a href="cart.html" class="cart-btn">
+
+            🛒
+
+            <span id="cart-count">0</span>
+
+        </a>
+
+    </div>
+
+</header>
+
+<main class="checkout-page">
+
+    <h1 class="products-title">
+
+        إتمام الطلب
+
+    </h1>
+
+    <div class="checkout-summary">
+
+        <h2>ملخص الطلب</h2>
+
+        <div class="summary-row">
+
+            <span>إجمالي المنتجات</span>
+
+            <span id="subtotal-price">0 جنيه</span>
+
+        </div>
+
+        <div class="summary-row">
+
+            <span>الشحن</span>
+
+            <span id="shipping-price">85 جنيه</span>
+
+        </div>
+
+        <div class="summary-row total-row">
+
+            <span>الإجمالي النهائي</span>
+
+            <span id="final-total">85 جنيه</span>
+
+        </div>
+
+        <p class="shipping-note">
+
+            🚚 الشحن حالياً ثابت بقيمة 85 جنيه وسيتم تحديثه لاحقاً.
+
+        </p>
+
+    </div>
+
+    <form id="checkout-form">
+
+        <input
+            type="text"
+            id="customer-name"
+            placeholder="الاسم بالكامل"
+            autocomplete="name"
+            required>
+
+        <input
+            type="tel"
+            id="customer-phone"
+            placeholder="رقم الهاتف"
+            maxlength="11"
+            pattern="^01[0125][0-9]{8}$"
+            inputmode="numeric"
+            oninput="this.value=this.value.replace(/[^0-9]/g,'')"
+            required>
+
+        <select id="customer-city" required>
+
+            <option value="">اختر المحافظة</option>
+
+            <option>القاهرة</option>
+            <option>الجيزة</option>
+            <option>الإسكندرية</option>
+            <option>القليوبية</option>
+            <option>الشرقية</option>
+            <option>الدقهلية</option>
+            <option>الغربية</option>
+            <option>المنوفية</option>
+            <option>البحيرة</option>
+            <option>كفر الشيخ</option>
+            <option>دمياط</option>
+            <option>بورسعيد</option>
+            <option>الإسماعيلية</option>
+            <option>السويس</option>
+            <option>شمال سيناء</option>
+            <option>جنوب سيناء</option>
+            <option>الفيوم</option>
+            <option>بني سويف</option>
+            <option>المنيا</option>
+            <option>أسيوط</option>
+            <option>سوهاج</option>
+            <option>قنا</option>
+            <option>الأقصر</option>
+            <option>أسوان</option>
+            <option>البحر الأحمر</option>
+            <option>مطروح</option>
+            <option>الوادي الجديد</option>
+
+        </select>
+
+        <input
+            type="text"
+            id="customer-area"
+            placeholder="المنطقة / المركز"
+            required>
+
+        <textarea
+            id="customer-address"
+            rows="4"
+            placeholder="العنوان بالتفصيل"
+            required></textarea>
+
+        <textarea
+            id="customer-note"
+            rows="3"
+            placeholder="ملاحظات (اختياري)"></textarea>
+
+        <div class="payment-box">
+
+            <h3>طريقة الدفع</h3>
+
+            <p>💵 الدفع عند الاستلام (Cash On Delivery)</p>
+
+        </div>
+
+        <button type="submit" class="shop-btn">
+
+            تأكيد الطلب عبر واتساب
+
+        </button>
+
+    </form>
+
+</main>
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
